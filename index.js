@@ -93,7 +93,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Select the license',
-        choices: ['MIT', 'Apache License 2.0', 'GNU General Public License (GPL) v3', 'Mozilla Public License 2.0', 'BSD 3-Clause License'],
+        choices: ['MIT', 'Apache_2.0', 'Boost_1.0', 'GNU General Public License (GPL) v3', 'Mozilla Public License 2.0', 'BSD_3--Clause'],
         default: 'MIT'
 
     }, 
