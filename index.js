@@ -93,7 +93,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Select the license',
-        choices: ['MIT', 'Apache_2.0', 'Boost_1.0', 'GNU General Public License (GPL) v3', 'Mozilla Public License 2.0', 'BSD_3--Clause'],
+        choices: ['MIT', 'Apache_2.0', 'Boost_1.0', 'GPLv3', 'Mozilla_2.0', 'BSD_3--Clause'],
         default: 'MIT'
 
     }, 
@@ -130,6 +130,10 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        err ? console.error(err)
+        : console.log('Success');
+    })
     
 }
 
@@ -140,13 +144,8 @@ function init() {
     .then((response) =>
     {
         console.log(response);
-    }
-    
-    
-    );
-
-
-    
+        writeToFile('README.md', generateMarkdown(response));
+    });    
 }
 
 // function call to initialize program
