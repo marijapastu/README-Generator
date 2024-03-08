@@ -13,10 +13,10 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
-  - [Tests] (#tests)
+  - [Tests](#tests)
   - [License](#license)
   - [Questions](#questions)
-0
+
   ## Installation
   ${data.installation}
 
@@ -30,13 +30,13 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## License
-  This project is covered under the terms of ${data.license} license.
+  This project is covered under the terms of [${data.license}](https://opensource.org/licenses/${data.license}) license.
 
   ## Questions
-  You can checkout my work in Github:
+  - You can view my work in GitHub:
   [${data.username}](https://github.com/${data.username})
-  Should you have any questions you can reach me via the below email:
-  ${data.email}
+  - Should you have any questions you can reach out to me via the below email:
+  [${data.email}](mailto:${data.email})
 
 
 `;
