@@ -50,7 +50,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructiona and examples for use',
+        message: 'Provide instructions and examples for use',
         validate: (userUsage) => {
             if (userUsage) {
                 return true;

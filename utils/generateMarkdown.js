@@ -25,6 +25,7 @@ function generateMarkdown(data) {
 
   ## Contributing
   ${data.contributing}
+  [github/docs/contribute](https://github/docs/contribute)
 
   ## Tests
   ${data.tests}
