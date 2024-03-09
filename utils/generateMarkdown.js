@@ -1,8 +1,23 @@
+// function to generate a badge and a link for the license
+
+function generateLicense (license) {
+  if (license === 'MIT') {
+    return `[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)`
+  } else if (license === 'Apache 2.0 License') {
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+  } else if (license === 'Boost Software License 1.0') {
+    return `[![License](https://img.shields.io/badge/License-Boost_1.0-blue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+  } else if (license === 'BSD 3-Clause License') {
+    return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
+  } 
+  
+}
+
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `
 
-  [![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
+  ${generateLicense(data.license)}
   
   # ${data.title}
 
@@ -31,7 +46,7 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## License
-  This project is covered under the terms of [${data.license}](https://opensource.org/licenses/${data.license}) license.
+  This project is covered under the terms of ${data.license} license.
 
   ## Questions
   - You can view my work in GitHub:
